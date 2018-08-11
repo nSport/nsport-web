@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
 import FootballSimulation from "./football-simulation"
+import Simulations from "./repository/simulations"
 
 class App extends Component {
 
 	render() {
+		let simulation = Simulations.staticData();
 		return (
 			<div id="App">
-				<FootballSimulation />
+				<FootballSimulation simulation={simulation}/>
 			</div>
 		);
 	}
